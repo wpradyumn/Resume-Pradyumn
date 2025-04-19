@@ -13,13 +13,14 @@
       <div class="main-name">Pradyumn Wadhwa</div>
       <div class="sub-tagline">BBA & B.Com Student</div>
     </div>
-    <ul>
+    <!-- Add hamburger icon for mobile -->
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    <ul id="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#certifications">Certifications</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#hobbies">Hobbies</a></li>
-      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
@@ -40,7 +41,7 @@
     </section>
 
     <section id="certifications">
-      <h2>📜 Certifications</h2>
+      <h2>💼 Certifications</h2>
       <ul>
         <li>Fundamentals of Digital Marketing – Google (2023)</li>
         <li>Introduction to Microsoft Excel – Coursera (2024)</li>
@@ -50,7 +51,7 @@
     </section>
 
     <section id="skills">
-      <h2>💼 Skills</h2>
+      <h2>🧠 Skills</h2>
       <div class="tag-container">
         <span>Microsoft Excel</span>
         <span>Leadership Skills</span>
@@ -63,17 +64,15 @@
     </section>
 
     <section id="hobbies">
-      <h2>📷 Hobbies</h2>
+      <h2>📸 Hobbies</h2>
       <ul>
-        <li>Photography </li>
+        <li>Photography</li>
         <li>Editing</li>
         <li>Vlogging</li>
         <li>Writing</li>
         <li>Reading</li>
       </ul>
-    </section>
 
-    <section id="contact">
       <h2>📇 Contact Information</h2>
       <div class="contact-info">
         <p><strong>Name:</strong> Pradyumn Wadhwa</p>
@@ -86,8 +85,15 @@
   <footer>
     <p>Crafted with love <br>Thanks and Regards,<br><strong>Pradyumn</strong><br><br>All rights reserved ©</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav-links').classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
+
 
 
 
