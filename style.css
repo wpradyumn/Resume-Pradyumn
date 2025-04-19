@@ -1,36 +1,35 @@
 style.css
-/* Global behavior */
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 100px;
-}
-
 /* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  scroll-padding-top: 100px;
 }
 
 body {
-  background: #ffffff; /* white background */
-  color: #333333; /* dark text for good readability */
+  background-color: #ffffff;
+  color: #000000;
   line-height: 1.6;
 }
 
 /* Navigation Bar */
 nav {
-  background-color: #c40000; /* red header */
+  background-color: #b30000; /* toned down red */
   color: white;
-  padding: 1.2rem 2rem;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
 nav .logo {
@@ -39,23 +38,22 @@ nav .logo {
 }
 
 nav .main-name {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.8rem;
+  font-weight: bold;
   letter-spacing: 1px;
-  color: white;
 }
 
 nav .sub-tagline {
   font-size: 0.95rem;
-  color: #ffdede;
-  font-weight: 400;
-  margin-top: 0.1rem;
+  font-style: italic;
+  color: #f0f0f0;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 nav ul li a {
@@ -66,7 +64,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #ffdede;
+  color: #ffcccc;
 }
 
 /* Main content */
@@ -79,18 +77,18 @@ main {
 /* Sections */
 section {
   margin-bottom: 3rem;
-  background: #f8f8f8; /* very light grey background for sections */
+  background: rgba(0, 0, 0, 0.03);
   padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* Section Headings */
+/* Headings */
 h2 {
-  color: #c40000; /* red heading */
-  font-size: 1.6rem;
+  color: #b30000;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
-  border-left: 4px solid #c40000;
+  border-left: 4px solid #b30000;
   padding-left: 10px;
 }
 
@@ -112,28 +110,23 @@ ul li {
 }
 
 .tag-container span {
-  background: #c40000; /* red tag background */
+  background: #b30000;
   color: white;
   padding: 0.4rem 0.9rem;
   border-radius: 20px;
   font-size: 0.9rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-/* Contact Info Section */
+/* Contact Info */
 .contact-info {
-  margin-top: 1.5rem;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
   font-size: 0.95rem;
-}
-
-.contact-info p {
-  margin: 0.4rem 0;
+  line-height: 1.6;
 }
 
 .contact-info a {
-  color: #c40000; /* red color for contact links */
+  color: #b30000;
   text-decoration: none;
 }
 
@@ -145,11 +138,11 @@ ul li {
 footer {
   text-align: center;
   padding: 2rem 0;
-  background-color: #f1f1f1; /* very light grey footer */
-  color: #333333;
+  background-color: #f5f5f5;
+  color: #b30000;
   font-style: italic;
   margin-top: 3rem;
-  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 0 40px rgba(179, 0, 0, 0.15);
 }
 
 footer strong {
@@ -157,10 +150,16 @@ footer strong {
   margin-top: 0.5rem;
 }
 
-/* Responsive Nav */
+/* Responsive Design */
 @media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   nav ul {
     flex-direction: column;
+    width: 100%;
     gap: 1rem;
     margin-top: 1rem;
   }
@@ -169,13 +168,20 @@ footer strong {
     justify-content: center;
   }
 
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
+  main {
+    padding: 1rem;
   }
 
-  nav .logo {
-    margin-bottom: 1rem;
+  section {
+    padding: 1rem;
+  }
+
+  nav .main-name {
+    font-size: 1.5rem;
+  }
+
+  nav .sub-tagline {
+    font-size: 0.85rem;
   }
 }
 
